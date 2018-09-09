@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     private static let collectionViewCellIdentifier = "collectionViewCellIdentifier"
-    private let imagesToDisplay: [UIImage] = [#imageLiteral(resourceName: "coast"), #imageLiteral(resourceName: "bridge"), #imageLiteral(resourceName: "mountain")]
+    private let imagesToDisplay: [UIImage] = [#imageLiteral(resourceName: "coast"), #imageLiteral(resourceName: "bridge"), #imageLiteral(resourceName: "mountain")] // images from https://www.pexels.com/public-domain-images/
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,9 +32,10 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPagingEnabled = true
-        
-        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).scrollDirection = .horizontal
-        (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).scrollDirection = .horizontal
+
+        let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flowLayout.minimumLineSpacing = 0.0
+        flowLayout.scrollDirection = .horizontal
         
         let nib = UINib(nibName: String(describing: PinchAndZoomCollectionViewCell.self), bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: ViewController.collectionViewCellIdentifier)
@@ -43,10 +44,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.frame.size

@@ -8,11 +8,13 @@
 
 import UIKit
 
-class PinchAndZoomCollectionViewCell: UICollectionViewCell {
+class PinchAndZoomCollectionViewCell: UICollectionViewCell, CanDoubleTapToZoom {
     
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    private var doubleTapGestureRecognizer: UITapGestureRecognizer!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +24,7 @@ class PinchAndZoomCollectionViewCell: UICollectionViewCell {
     
     private func initViews() {
         initScrollView()
+        initImageView()
     }
 
     private func initScrollView() {
@@ -29,6 +32,36 @@ class PinchAndZoomCollectionViewCell: UICollectionViewCell {
         scrollView.maximumZoomScale = 5
         scrollView.minimumZoomScale = 1
     }
+    
+    private func initImageView() {
+        imageView.contentMode = .scaleAspectFit
+        enableDoubleTapToZoom(forImageView: imageView)
+    }
+    
+    private func enableDoubleTapToZoom(forImageView imageView: UIImageView) {
+        let selector = #selector(doubleTapGestureHandler(_:))
+        doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: selector)
+        doubleTapGestureRecognizer.numberOfTapsRequired = 2
+        imageView.addGestureRecognizer(doubleTapGestureRecognizer)
+        imageView.isUserInteractionEnabled = true
+    }
+    
+    // MARK: Actions
+    
+    @objc func doubleTapGestureHandler(_ gesture: UITapGestureRecognizer) {
+        let tapOrigin = gesture.location(in: gesture.view!)
+        
+        let zoomingAreaWidth: CGFloat = 200.0
+        let zoomingAreaHeight: CGFloat = 200.0
+        
+        let zoomArea = CGRect(x: tapOrigin.x - zoomingAreaWidth/2,
+                              y: tapOrigin.y - zoomingAreaHeight/2,
+                              width: zoomingAreaWidth,
+                              height: zoomingAreaHeight)
+        
+        scrollView.zoom(to: zoomArea, animated: true)
+    }
+    
 }
 
 extension PinchAndZoomCollectionViewCell: UIScrollViewDelegate {
