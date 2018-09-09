@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C437A8E2144B28300F4AA2F /* PinchAndZoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinchAndZoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C437A8E2144B28300F4AA2F /* PinchAndZoomDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinchAndZoomDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C437A912144B28300F4AA2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C437A932144B28300F4AA2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C437A962144B28300F4AA2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		5C437A8F2144B28300F4AA2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C437A8E2144B28300F4AA2F /* PinchAndZoom.app */,
+				5C437A8E2144B28300F4AA2F /* PinchAndZoomDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,9 +81,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5C437A8D2144B28300F4AA2F /* PinchAndZoom */ = {
+		5C437A8D2144B28300F4AA2F /* PinchAndZoomDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C437AA02144B28400F4AA2F /* Build configuration list for PBXNativeTarget "PinchAndZoom" */;
+			buildConfigurationList = 5C437AA02144B28400F4AA2F /* Build configuration list for PBXNativeTarget "PinchAndZoomDemo" */;
 			buildPhases = (
 				5C437A8A2144B28300F4AA2F /* Sources */,
 				5C437A8B2144B28300F4AA2F /* Frameworks */,
@@ -93,9 +93,9 @@
 			);
 			dependencies = (
 			);
-			name = PinchAndZoom;
+			name = PinchAndZoomDemo;
 			productName = PinchAndZoom;
-			productReference = 5C437A8E2144B28300F4AA2F /* PinchAndZoom.app */;
+			productReference = 5C437A8E2144B28300F4AA2F /* PinchAndZoomDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +113,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5C437A892144B28300F4AA2F /* Build configuration list for PBXProject "PinchAndZoom" */;
+			buildConfigurationList = 5C437A892144B28300F4AA2F /* Build configuration list for PBXProject "PinchAndZoomDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C437A8D2144B28300F4AA2F /* PinchAndZoom */,
+				5C437A8D2144B28300F4AA2F /* PinchAndZoomDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C437A892144B28300F4AA2F /* Build configuration list for PBXProject "PinchAndZoom" */ = {
+		5C437A892144B28300F4AA2F /* Build configuration list for PBXProject "PinchAndZoomDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C437A9E2144B28400F4AA2F /* Debug */,
@@ -340,7 +340,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C437AA02144B28400F4AA2F /* Build configuration list for PBXNativeTarget "PinchAndZoom" */ = {
+		5C437AA02144B28400F4AA2F /* Build configuration list for PBXNativeTarget "PinchAndZoomDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C437AA12144B28400F4AA2F /* Debug */,
