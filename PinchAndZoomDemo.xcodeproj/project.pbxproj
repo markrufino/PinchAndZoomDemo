@@ -14,7 +14,6 @@
 		5C437A9C2144B28400F4AA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C437A9A2144B28400F4AA2F /* LaunchScreen.storyboard */; };
 		5C437AA52144CA7B00F4AA2F /* PinchAndZoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C437AA32144CA7B00F4AA2F /* PinchAndZoomCollectionViewCell.swift */; };
 		5C437AA62144CA7B00F4AA2F /* PinchAndZoomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C437AA42144CA7B00F4AA2F /* PinchAndZoomCollectionViewCell.xib */; };
-		5C437AAC2144E1FE00F4AA2F /* CanDoubleTapToZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C437AAB2144E1FE00F4AA2F /* CanDoubleTapToZoom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		5C437A9D2144B28400F4AA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C437AA32144CA7B00F4AA2F /* PinchAndZoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchAndZoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C437AA42144CA7B00F4AA2F /* PinchAndZoomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinchAndZoomCollectionViewCell.xib; sourceTree = "<group>"; };
-		5C437AAB2144E1FE00F4AA2F /* CanDoubleTapToZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanDoubleTapToZoom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 		5C437A902144B28300F4AA2F /* PinchAndZoom */ = {
 			isa = PBXGroup;
 			children = (
-				5C437AA82144E1CA00F4AA2F /* CanDoubleTapToZoom */,
 				5C437AA72144CA7F00F4AA2F /* PinchAndZoomCollectionViewCell */,
 				5C437A912144B28300F4AA2F /* AppDelegate.swift */,
 				5C437A932144B28300F4AA2F /* ViewController.swift */,
@@ -79,14 +76,6 @@
 				5C437AA42144CA7B00F4AA2F /* PinchAndZoomCollectionViewCell.xib */,
 			);
 			path = PinchAndZoomCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		5C437AA82144E1CA00F4AA2F /* CanDoubleTapToZoom */ = {
-			isa = PBXGroup;
-			children = (
-				5C437AAB2144E1FE00F4AA2F /* CanDoubleTapToZoom.swift */,
-			);
-			path = CanDoubleTapToZoom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C437AA52144CA7B00F4AA2F /* PinchAndZoomCollectionViewCell.swift in Sources */,
-				5C437AAC2144E1FE00F4AA2F /* CanDoubleTapToZoom.swift in Sources */,
 				5C437A942144B28300F4AA2F /* ViewController.swift in Sources */,
 				5C437A922144B28300F4AA2F /* AppDelegate.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PinchAndZoomCollectionViewCell: UICollectionViewCell, CanDoubleTapToZoom {
+class PinchAndZoomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -49,6 +49,12 @@ class PinchAndZoomCollectionViewCell: UICollectionViewCell, CanDoubleTapToZoom {
     // MARK: Actions
     
     @objc func doubleTapGestureHandler(_ gesture: UITapGestureRecognizer) {
+        
+        guard scrollView.zoomScale <= 1.0 else {
+            scrollView.setZoomScale(1.0, animated: true)
+            return
+        }
+        
         let tapOrigin = gesture.location(in: gesture.view!)
         
         let zoomingAreaWidth: CGFloat = 200.0
